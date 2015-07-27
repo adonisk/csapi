@@ -1,0 +1,10 @@
+C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Release\csapi.dll
+C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Release\csapi.pdb
+C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Release\Google.ProtocolBuffers.dll
+C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Release\Google.ProtocolBuffers.Serialization.dll
+C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Release\Google.ProtocolBuffers.xml
+C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Release\Google.ProtocolBuffers.Serialization.xml
+C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Release\csapi.Properties.Resources.resources
+C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Release\csapi.csproj.GenerateResource.Cache
+C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Release\csapi.dll
+C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Release\csapi.pdb

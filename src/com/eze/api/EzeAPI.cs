@@ -387,8 +387,8 @@ public class EzeAPI {
 	
 	public byte[] intToBytes(int intValue) {
         byte[] intBytes = BitConverter.GetBytes(intValue);
-        //if (BitConverter.IsLittleEndian)
-        //    Array.Reverse(intBytes);
+        if (!BitConverter.IsLittleEndian)
+            Array.Reverse(intBytes);
         byte[] result = intBytes;
 	    return result;
     }

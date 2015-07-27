@@ -4,7 +4,6 @@ C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Debug\Google.ProtocolBu
 C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Debug\Google.ProtocolBuffers.Serialization.dll
 C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Debug\Google.ProtocolBuffers.xml
 C:\Users\Karthik Krishna\workspace\proserv\csapi\bin\x86\Debug\Google.ProtocolBuffers.Serialization.xml
-C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Debug\csapi.csprojResolveAssemblyReference.cache
 C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Debug\csapi.Properties.Resources.resources
 C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Debug\csapi.csproj.GenerateResource.Cache
 C:\Users\Karthik Krishna\workspace\proserv\csapi\obj\x86\Debug\csapi.dll
