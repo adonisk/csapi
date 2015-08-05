@@ -6,7 +6,6 @@ using pb = global::Google.ProtocolBuffers;
 using pbc = global::Google.ProtocolBuffers.Collections;
 using pbd = global::Google.ProtocolBuffers.Descriptors;
 using scg = global::System.Collections.Generic;
-
 namespace com.eze.ezecli {
   
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17,40 +16,44 @@ namespace com.eze.ezecli {
     }
     #endregion
     #region Static variables
-    internal static pbd::MessageDescriptor internal__static_ezecli_ApiInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiInput, global::com.eze.ezecli.ApiInput.Builder> internal__static_ezecli_ApiInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_ApiOutput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiOutput, global::com.eze.ezecli.ApiOutput.Builder> internal__static_ezecli_ApiOutput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_ChangePasswordInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ChangePasswordInput, global::com.eze.ezecli.ChangePasswordInput.Builder> internal__static_ezecli_ChangePasswordInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_ForwardReceiptInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ForwardReceiptInput, global::com.eze.ezecli.ForwardReceiptInput.Builder> internal__static_ezecli_ForwardReceiptInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_LoginInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginInput, global::com.eze.ezecli.LoginInput.Builder> internal__static_ezecli_LoginInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_LoginOutput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginOutput, global::com.eze.ezecli.LoginOutput.Builder> internal__static_ezecli_LoginOutput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_ProgressInfo__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ProgressInfo, global::com.eze.ezecli.ProgressInfo.Builder> internal__static_ezecli_ProgressInfo__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_SignatureInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.SignatureInput, global::com.eze.ezecli.SignatureInput.Builder> internal__static_ezecli_SignatureInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_StatusInfo__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.StatusInfo, global::com.eze.ezecli.StatusInfo.Builder> internal__static_ezecli_StatusInfo__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_TxnDetailsInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnDetailsInput, global::com.eze.ezecli.TxnDetailsInput.Builder> internal__static_ezecli_TxnDetailsInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_TxnHistoryInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistoryInput, global::com.eze.ezecli.TxnHistoryInput.Builder> internal__static_ezecli_TxnHistoryInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_TxnHistory__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory, global::com.eze.ezecli.TxnHistory.Builder> internal__static_ezecli_TxnHistory__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_TxnHistory_SummaryItem__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory.Types.SummaryItem, global::com.eze.ezecli.TxnHistory.Types.SummaryItem.Builder> internal__static_ezecli_TxnHistory_SummaryItem__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_TxnInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnInput, global::com.eze.ezecli.TxnInput.Builder> internal__static_ezecli_TxnInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_Txn__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.Txn, global::com.eze.ezecli.Txn.Builder> internal__static_ezecli_Txn__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_TxnStatusInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnStatusInput, global::com.eze.ezecli.TxnStatusInput.Builder> internal__static_ezecli_TxnStatusInput__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_ezecli_VoidTxnInput__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.VoidTxnInput, global::com.eze.ezecli.VoidTxnInput.Builder> internal__static_ezecli_VoidTxnInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_ApiInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiInput, global::com.eze.ezecli.ApiInput.Builder> internal__static_com_eze_ezecli_ApiInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_ApiOutput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiOutput, global::com.eze.ezecli.ApiOutput.Builder> internal__static_com_eze_ezecli_ApiOutput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_ChangePasswordInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ChangePasswordInput, global::com.eze.ezecli.ChangePasswordInput.Builder> internal__static_com_eze_ezecli_ChangePasswordInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_ForwardReceiptInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ForwardReceiptInput, global::com.eze.ezecli.ForwardReceiptInput.Builder> internal__static_com_eze_ezecli_ForwardReceiptInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_LoginInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginInput, global::com.eze.ezecli.LoginInput.Builder> internal__static_com_eze_ezecli_LoginInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_LoginOutput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginOutput, global::com.eze.ezecli.LoginOutput.Builder> internal__static_com_eze_ezecli_LoginOutput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_ProgressInfo__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ProgressInfo, global::com.eze.ezecli.ProgressInfo.Builder> internal__static_com_eze_ezecli_ProgressInfo__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_SignatureInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.SignatureInput, global::com.eze.ezecli.SignatureInput.Builder> internal__static_com_eze_ezecli_SignatureInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_StatusInfo__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.StatusInfo, global::com.eze.ezecli.StatusInfo.Builder> internal__static_com_eze_ezecli_StatusInfo__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_TxnDetailsInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnDetailsInput, global::com.eze.ezecli.TxnDetailsInput.Builder> internal__static_com_eze_ezecli_TxnDetailsInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_TxnHistoryInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistoryInput, global::com.eze.ezecli.TxnHistoryInput.Builder> internal__static_com_eze_ezecli_TxnHistoryInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_TxnHistory__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory, global::com.eze.ezecli.TxnHistory.Builder> internal__static_com_eze_ezecli_TxnHistory__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_TxnHistory_SummaryItem__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory.Types.SummaryItem, global::com.eze.ezecli.TxnHistory.Types.SummaryItem.Builder> internal__static_com_eze_ezecli_TxnHistory_SummaryItem__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_TxnInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnInput, global::com.eze.ezecli.TxnInput.Builder> internal__static_com_eze_ezecli_TxnInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_Txn__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.Txn, global::com.eze.ezecli.Txn.Builder> internal__static_com_eze_ezecli_Txn__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_TxnStatusInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnStatusInput, global::com.eze.ezecli.TxnStatusInput.Builder> internal__static_com_eze_ezecli_TxnStatusInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_VoidTxnInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.VoidTxnInput, global::com.eze.ezecli.VoidTxnInput.Builder> internal__static_com_eze_ezecli_VoidTxnInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_ServerTypeInput__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ServerTypeInput, global::com.eze.ezecli.ServerTypeInput.Builder> internal__static_com_eze_ezecli_ServerTypeInput__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_com_eze_ezecli_AppInfo__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.AppInfo, global::com.eze.ezecli.AppInfo.Builder> internal__static_com_eze_ezecli_AppInfo__FieldAccessorTable;
     #endregion
     #region Descriptor
     public static pbd::FileDescriptor Descriptor {
@@ -60,26 +63,29 @@ namespace com.eze.ezecli {
     
     static Ezetap() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
-          "CgxlemV0YXAucHJvdG8SBmV6ZWNsaSK9AgoIQXBpSW5wdXQSLQoHbXNnVHlw" + 
-          "ZRgBIAIoDjIcLmV6ZWNsaS5BcGlJbnB1dC5NZXNzYWdlVHlwZRIPCgdtc2dE" + 
-          "YXRhGAIgASgMIvABCgtNZXNzYWdlVHlwZRIICgRFWElUEAASCQoFTE9HSU4Q" + 
-          "ARIHCgNUWE4QAhISCg5QUkVQQVJFX0RFVklDRRADEhQKEEFUVEFDSF9TSUdO" + 
-          "QVRVUkUQBBIPCgtUWE5fSElTVE9SWRAFEgwKCFZPSURfVFhOEAYSEwoPRk9S" + 
-          "V0FSRF9SRUNFSVBUEAcSDgoKVFhOX1NUQVRVUxAIEhMKD0NIQU5HRV9QQVNT" + 
-          "V09SRBAJEgoKBkxPR09VVBAKEg8KC1RYTl9ERVRBSUxTEAsSEAoMRU5BQkxF" + 
-          "X0RFQlVHEGISEQoNRElTQUJMRV9ERUJVRxBjIvYICglBcGlPdXRwdXQSLgoJ" + 
-          "ZXZlbnRUeXBlGAEgAigOMhsuZXplY2xpLkFwaU91dHB1dC5FdmVudFR5cGUS" + 
-          "LgoGc3RhdHVzGAIgAigOMh4uZXplY2xpLkFwaU91dHB1dC5SZXN1bHRTdGF0" + 
-          "dXMSDwoHbXNnVGV4dBgDIAEoCRIPCgdvdXREYXRhGAQgASgMEjgKDG5vdGlm" + 
-          "aWNhdGlvbhgFIAEoDjIiLmV6ZWNsaS5BcGlPdXRwdXQuTm90aWZpY2F0aW9u" + 
-          "VHlwZSIoCgxSZXN1bHRTdGF0dXMSCwoHU1VDQ0VTUxAAEgsKB0ZBSUxVUkUQ" + 
-          "ASLFAgoJRXZlbnRUeXBlEhAKDExPR0lOX1JFU1VMVBAAEhEKDUxPR09VVF9S" + 
-          "RVNVTFQQARIOCgpUWE5fUkVTVUxUEAISGQoVUFJFUEFSRV9ERVZJQ0VfUkVT" + 
-          "VUxUEAMSGwoXQVRUQUNIX1NJR05BVFVSRV9SRVNVTFQQBBIWChJUWE5fSElT" + 
-          "VE9SWV9SRVNVTFQQBRITCg9WT0lEX1RYTl9SRVNVTFQQBhIaChZGT1JXQVJE" + 
-          "X1JFQ0VJUFRfUkVTVUxUEAcSFQoRVFhOX1NUQVRVU19SRVNVTFQQCBIaChZD" + 
-          "SEFOR0VfUEFTU1dPUkRfUkVTVUxUEAkSFgoSVFhOX0RFVEFJTFNfUkVTVUxU" + 
-          "EAoSEAoMQVBJX1BST0dSRVNTEAsSFAoQQVBJX05PVElGSUNBVElPThAMEg8K" + 
+          "CgxlemV0YXAucHJvdG8SDmNvbS5lemUuZXplY2xpIvgCCghBcGlJbnB1dBI1" + 
+          "Cgdtc2dUeXBlGAEgAigOMiQuY29tLmV6ZS5lemVjbGkuQXBpSW5wdXQuTWVz" + 
+          "c2FnZVR5cGUSDwoHbXNnRGF0YRgCIAEoDCKjAgoLTWVzc2FnZVR5cGUSCAoE" + 
+          "RVhJVBAAEgkKBUxPR0lOEAESBwoDVFhOEAISEgoOUFJFUEFSRV9ERVZJQ0UQ" + 
+          "AxIUChBBVFRBQ0hfU0lHTkFUVVJFEAQSDwoLVFhOX0hJU1RPUlkQBRIMCghW" + 
+          "T0lEX1RYThAGEhMKD0ZPUldBUkRfUkVDRUlQVBAHEg4KClRYTl9TVEFUVVMQ" + 
+          "CBITCg9DSEFOR0VfUEFTU1dPUkQQCRIKCgZMT0dPVVQQChIPCgtUWE5fREVU" + 
+          "QUlMUxALEhIKDlNFUlZFUkFQSV9JTkZPEAwSDwoLU0VSVkVSX1RZUEUQDRIM" + 
+          "CghBUFBfSU5GTxBhEhAKDEVOQUJMRV9ERUJVRxBiEhEKDURJU0FCTEVfREVC" + 
+          "VUcQYyK6CQoJQXBpT3V0cHV0EjYKCWV2ZW50VHlwZRgBIAIoDjIjLmNvbS5l" + 
+          "emUuZXplY2xpLkFwaU91dHB1dC5FdmVudFR5cGUSNgoGc3RhdHVzGAIgAigO" + 
+          "MiYuY29tLmV6ZS5lemVjbGkuQXBpT3V0cHV0LlJlc3VsdFN0YXR1cxIPCgdt" + 
+          "c2dUZXh0GAMgASgJEg8KB291dERhdGEYBCABKAwSQAoMbm90aWZpY2F0aW9u" + 
+          "GAUgASgOMiouY29tLmV6ZS5lemVjbGkuQXBpT3V0cHV0Lk5vdGlmaWNhdGlv" + 
+          "blR5cGUiKAoMUmVzdWx0U3RhdHVzEgsKB1NVQ0NFU1MQABILCgdGQUlMVVJF" + 
+          "EAEi8QIKCUV2ZW50VHlwZRIQCgxMT0dJTl9SRVNVTFQQABIRCg1MT0dPVVRf" + 
+          "UkVTVUxUEAESDgoKVFhOX1JFU1VMVBACEhkKFVBSRVBBUkVfREVWSUNFX1JF" + 
+          "U1VMVBADEhsKF0FUVEFDSF9TSUdOQVRVUkVfUkVTVUxUEAQSFgoSVFhOX0hJ" + 
+          "U1RPUllfUkVTVUxUEAUSEwoPVk9JRF9UWE5fUkVTVUxUEAYSGgoWRk9SV0FS" + 
+          "RF9SRUNFSVBUX1JFU1VMVBAHEhUKEVRYTl9TVEFUVVNfUkVTVUxUEAgSGgoW" + 
+          "Q0hBTkdFX1BBU1NXT1JEX1JFU1VMVBAJEhYKElRYTl9ERVRBSUxTX1JFU1VM" + 
+          "VBAKEhAKDEFQSV9QUk9HUkVTUxALEhQKEEFQSV9OT1RJRklDQVRJT04QDBIU" + 
+          "ChBTRVJWRVJBUElfUkVTVUxUEA0SFAoQU0VUU0VSVkVSX1JFU1VMVBAOEg8K" + 
           "C0VYSVRfUkVTVUxUEGMiugQKEE5vdGlmaWNhdGlvblR5cGUSGwoXRVBJQ19J" + 
           "REVOVElGWUlOR19ERVZJQ0UQARIaChZFUElDX1ZBTElEQVRJTkdfREVWSUNF" + 
           "EAISGQoVRVBJQ19QUkVQQVJJTkdfREVWSUNFEAMSGgoWRVBJQ19QUkVQQVJJ" + 
@@ -96,121 +102,135 @@ namespace com.eze.ezecli {
           "EBUiQwoTQ2hhbmdlUGFzc3dvcmRJbnB1dBIXCg9jdXJyZW50UGFzc3dvcmQY" + 
           "ASACKAkSEwoLbmV3UGFzc3dvcmQYAiACKAkiUwoTRm9yd2FyZFJlY2VpcHRJ" + 
           "bnB1dBINCgV0eG5JZBgBIAIoCRIWCg5jdXN0b21lck1vYmlsZRgCIAEoCRIV" + 
-          "Cg1jdXN0b21lckVtYWlsGAMgASgJIocBCgpMb2dpbklucHV0Ei8KCWxvZ2lu" + 
-          "TW9kZRgBIAIoDjIcLmV6ZWNsaS5Mb2dpbklucHV0LkxvZ2luTW9kZRIQCgh1" + 
-          "c2VybmFtZRgCIAIoCRIPCgdwYXNza2V5GAMgAigJIiUKCUxvZ2luTW9kZRIM" + 
-          "CghQQVNTV09SRBAAEgoKBkFQUEtFWRABIjMKC0xvZ2luT3V0cHV0EhIKCnNl" + 
-          "c3Npb25LZXkYASABKAkSEAoIc2V0dGluZ3MYAiABKAkiOgoMUHJvZ3Jlc3NJ" + 
-          "bmZvEhYKDnN0ZXBzQ29tcGxldGVkGAEgAigFEhIKCnRvdGFsU3RlcHMYAiAC" + 
-          "KAUizAEKDlNpZ25hdHVyZUlucHV0Eg0KBXR4bklkGAEgAigJEjMKCWltYWdl" + 
-          "VHlwZRgCIAIoDjIgLmV6ZWNsaS5TaWduYXR1cmVJbnB1dC5JbWFnZVR5cGUS" + 
-          "EgoKaW1hZ2VCeXRlcxgDIAIoDBIOCgZoZWlnaHQYBCABKAUSDQoFd2lkdGgY" + 
-          "BSABKAUSEQoJdGlwQW1vdW50GAYgASgBIjAKCUltYWdlVHlwZRIHCgNQTkcQ" + 
-          "ABIHCgNHSUYQARIICgRKUEVHEAISBwoDQk1QEAMiKwoKU3RhdHVzSW5mbxIM" + 
-          "CgRjb2RlGAEgAigJEg8KB21lc3NhZ2UYAiACKAkiIAoPVHhuRGV0YWlsc0lu" + 
-          "cHV0Eg0KBXR4bklkGAEgAigJIjQKD1R4bkhpc3RvcnlJbnB1dBIQCghzdHJ0" + 
-          "RGF0ZRgBIAIoCRIPCgdlbmREYXRlGAIgAigJItsBCgpUeG5IaXN0b3J5EhIK" + 
-          "CnRvdGFsQ291bnQYASACKAUSEQoJbmV0QW1vdW50GAIgAigBEhgKEHN1bW1h" + 
-          "cnlJdGVtQ291bnQYAyACKAUSNAoMc3VtbWFyeUl0ZW1zGAQgAygLMh4uZXpl" + 
-          "Y2xpLlR4bkhpc3RvcnkuU3VtbWFyeUl0ZW0SGQoEdHhucxgFIAMoCzILLmV6" + 
-          "ZWNsaS5UeG4aOwoLU3VtbWFyeUl0ZW0SDQoFdGl0bGUYASACKAkSDQoFY291" + 
-          "bnQYAiACKAUSDgoGYW1vdW50GAMgAigBIqYDCghUeG5JbnB1dBIpCgd0eG5U" + 
-          "eXBlGAEgAigOMhguZXplY2xpLlR4bklucHV0LlR4blR5cGUSDgoGYW1vdW50" + 
-          "GAIgAigBEg8KB29yZGVySWQYAyABKAkSDQoFbm9uY2UYBCABKAkSFgoOY3Vz" + 
-          "dG9tZXJNb2JpbGUYBSABKAkSFQoNY3VzdG9tZXJFbWFpbBgGIAEoCRIaChJl" + 
-          "eHRlcm5hbFJlZmVyZW5jZTIYByABKAkSGgoSZXh0ZXJuYWxSZWZlcmVuY2Uz" + 
-          "GAggASgJEhMKC2Ftb3VudE90aGVyGAkgASgBEhQKDGNoZXF1ZU51bWJlchgK" + 
-          "IAEoCRIQCghiYW5rQ29kZRgLIAEoCRISCgpjaGVxdWVEYXRlGAwgASgJEhYK" + 
-          "DmFkZGl0aW9uYWxEYXRhGA0gASgJEhQKDHJlY2VpcHRfdHlwZRgOIAEoCSJZ" + 
-          "CgdUeG5UeXBlEg0KCUNBUkRfQVVUSBAAEhEKDUNBUkRfUFJFX0FVVEgQARIW" + 
-          "ChJDQVJEX1BSRV9BVVRIX0NPTkYQAhIICgRDQVNIEAMSCgoGQ0hFUVVFEAQi" + 
-          "ogUKA1R4bhIkCgd0eG5UeXBlGAEgAigOMhMuZXplY2xpLlR4bi5UeG5UeXBl" + 
-          "Eg4KBmFtb3VudBgCIAIoARIVCg10cmFuc2FjdGlvbklkGAMgAigJEhEKCXRp" + 
-          "bWVzdGFtcBgEIAIoCRISCgpyZWNlaXB0VXJsGAUgAigJEg8KB29yZGVySWQY" + 
-          "BiACKAkSIAoYZXh0ZXJuYWxSZWZlcmVuY2VOdW1iZXIyGAcgAigJEiAKGGV4" + 
-          "dGVybmFsUmVmZXJlbmNlTnVtYmVyMxgIIAIoCRIcChRjdXN0b21lck1vYmls" + 
-          "ZU51bWJlchgJIAIoCRIUCgxjdXN0b21lck5hbWUYCiACKAkSDgoGc3RhdHVz" + 
-          "GAsgAigJEhUKDXVzZXJBZ3JlZW1lbnQYDCABKAkSEAoIYXV0aENvZGUYDSAB" + 
-          "KAkSFwoPbGFzdEZvdW5kRGlnaXRzGA4gASgJEhEKCWNhcmRCcmFuZBgPIAEo" + 
-          "CRIVCg1pbnZvaWNlTnVtYmVyGBAgASgJEhMKC2JhdGNoTnVtYmVyGBEgASgJ" + 
-          "EgsKA21pZBgSIAEoCRILCgN0aWQYEyABKAkSGAoQcmV2ZXJzZVJlZk51bWJl" + 
-          "chgUIAEoCRIUCgxjaGVxdWVOdW1iZXIYFSABKAkSEAoIYmFua0NvZGUYFiAB" + 
-          "KAkSEgoKY2hlcXVlRGF0ZRgXIAEoCRIYChBzZXR0bGVtZW50U3RhdHVzGBgg" + 
-          "ASgJEhAKCHZvaWRhYmxlGBkgASgIEhYKDnNlcnZlclJlc3BvbnNlGBogASgJ" + 
-          "IlkKB1R4blR5cGUSDQoJQ0FSRF9BVVRIEAASEQoNQ0FSRF9QUkVfQVVUSBAB" + 
-          "EhYKEkNBUkRfUFJFX0FVVEhfQ09ORhACEggKBENBU0gQAxIKCgZDSEVRVUUQ" + 
-          "BCIfCg5UeG5TdGF0dXNJbnB1dBINCgVub25jZRgBIAIoCSIdCgxWb2lkVHhu" + 
-          "SW5wdXQSDQoFdHhuSWQYASACKAlCEgoOY29tLmV6ZS5lemVjbGlQAQ==");
+          "Cg1jdXN0b21lckVtYWlsGAMgASgJIo8BCgpMb2dpbklucHV0EjcKCWxvZ2lu" + 
+          "TW9kZRgBIAIoDjIkLmNvbS5lemUuZXplY2xpLkxvZ2luSW5wdXQuTG9naW5N" + 
+          "b2RlEhAKCHVzZXJuYW1lGAIgAigJEg8KB3Bhc3NrZXkYAyACKAkiJQoJTG9n" + 
+          "aW5Nb2RlEgwKCFBBU1NXT1JEEAASCgoGQVBQS0VZEAEiMwoLTG9naW5PdXRw" + 
+          "dXQSEgoKc2Vzc2lvbktleRgBIAEoCRIQCghzZXR0aW5ncxgCIAEoCSI6CgxQ" + 
+          "cm9ncmVzc0luZm8SFgoOc3RlcHNDb21wbGV0ZWQYASACKAUSEgoKdG90YWxT" + 
+          "dGVwcxgCIAIoBSLUAQoOU2lnbmF0dXJlSW5wdXQSDQoFdHhuSWQYASACKAkS" + 
+          "OwoJaW1hZ2VUeXBlGAIgAigOMiguY29tLmV6ZS5lemVjbGkuU2lnbmF0dXJl" + 
+          "SW5wdXQuSW1hZ2VUeXBlEhIKCmltYWdlQnl0ZXMYAyACKAwSDgoGaGVpZ2h0" + 
+          "GAQgASgFEg0KBXdpZHRoGAUgASgFEhEKCXRpcEFtb3VudBgGIAEoASIwCglJ" + 
+          "bWFnZVR5cGUSBwoDUE5HEAASBwoDR0lGEAESCAoESlBFRxACEgcKA0JNUBAD" + 
+          "IisKClN0YXR1c0luZm8SDAoEY29kZRgBIAIoCRIPCgdtZXNzYWdlGAIgAigJ" + 
+          "IiAKD1R4bkRldGFpbHNJbnB1dBINCgV0eG5JZBgBIAIoCSI0Cg9UeG5IaXN0" + 
+          "b3J5SW5wdXQSEAoIc3RydERhdGUYASACKAkSDwoHZW5kRGF0ZRgCIAIoCSLr" + 
+          "AQoKVHhuSGlzdG9yeRISCgp0b3RhbENvdW50GAEgAigFEhEKCW5ldEFtb3Vu" + 
+          "dBgCIAIoARIYChBzdW1tYXJ5SXRlbUNvdW50GAMgAigFEjwKDHN1bW1hcnlJ" + 
+          "dGVtcxgEIAMoCzImLmNvbS5lemUuZXplY2xpLlR4bkhpc3RvcnkuU3VtbWFy" + 
+          "eUl0ZW0SIQoEdHhucxgFIAMoCzITLmNvbS5lemUuZXplY2xpLlR4bho7CgtT" + 
+          "dW1tYXJ5SXRlbRINCgV0aXRsZRgBIAIoCRINCgVjb3VudBgCIAIoBRIOCgZh" + 
+          "bW91bnQYAyACKAEirgMKCFR4bklucHV0EjEKB3R4blR5cGUYASACKA4yIC5j" + 
+          "b20uZXplLmV6ZWNsaS5UeG5JbnB1dC5UeG5UeXBlEg4KBmFtb3VudBgCIAIo" + 
+          "ARIPCgdvcmRlcklkGAMgASgJEg0KBW5vbmNlGAQgASgJEhYKDmN1c3RvbWVy" + 
+          "TW9iaWxlGAUgASgJEhUKDWN1c3RvbWVyRW1haWwYBiABKAkSGgoSZXh0ZXJu" + 
+          "YWxSZWZlcmVuY2UyGAcgASgJEhoKEmV4dGVybmFsUmVmZXJlbmNlMxgIIAEo" + 
+          "CRITCgthbW91bnRPdGhlchgJIAEoARIUCgxjaGVxdWVOdW1iZXIYCiABKAkS" + 
+          "EAoIYmFua0NvZGUYCyABKAkSEgoKY2hlcXVlRGF0ZRgMIAEoCRIWCg5hZGRp" + 
+          "dGlvbmFsRGF0YRgNIAEoCRIUCgxyZWNlaXB0X3R5cGUYDiABKAkiWQoHVHhu" + 
+          "VHlwZRINCglDQVJEX0FVVEgQABIRCg1DQVJEX1BSRV9BVVRIEAESFgoSQ0FS" + 
+          "RF9QUkVfQVVUSF9DT05GEAISCAoEQ0FTSBADEgoKBkNIRVFVRRAEIqoFCgNU" + 
+          "eG4SLAoHdHhuVHlwZRgBIAIoDjIbLmNvbS5lemUuZXplY2xpLlR4bi5UeG5U" + 
+          "eXBlEg4KBmFtb3VudBgCIAIoARIVCg10cmFuc2FjdGlvbklkGAMgAigJEhEK" + 
+          "CXRpbWVzdGFtcBgEIAIoCRISCgpyZWNlaXB0VXJsGAUgAigJEg8KB29yZGVy" + 
+          "SWQYBiACKAkSIAoYZXh0ZXJuYWxSZWZlcmVuY2VOdW1iZXIyGAcgAigJEiAK" + 
+          "GGV4dGVybmFsUmVmZXJlbmNlTnVtYmVyMxgIIAIoCRIcChRjdXN0b21lck1v" + 
+          "YmlsZU51bWJlchgJIAIoCRIUCgxjdXN0b21lck5hbWUYCiACKAkSDgoGc3Rh" + 
+          "dHVzGAsgAigJEhUKDXVzZXJBZ3JlZW1lbnQYDCABKAkSEAoIYXV0aENvZGUY" + 
+          "DSABKAkSFwoPbGFzdEZvdW5kRGlnaXRzGA4gASgJEhEKCWNhcmRCcmFuZBgP" + 
+          "IAEoCRIVCg1pbnZvaWNlTnVtYmVyGBAgASgJEhMKC2JhdGNoTnVtYmVyGBEg" + 
+          "ASgJEgsKA21pZBgSIAEoCRILCgN0aWQYEyABKAkSGAoQcmV2ZXJzZVJlZk51" + 
+          "bWJlchgUIAEoCRIUCgxjaGVxdWVOdW1iZXIYFSABKAkSEAoIYmFua0NvZGUY" + 
+          "FiABKAkSEgoKY2hlcXVlRGF0ZRgXIAEoCRIYChBzZXR0bGVtZW50U3RhdHVz" + 
+          "GBggASgJEhAKCHZvaWRhYmxlGBkgASgIEhYKDnNlcnZlclJlc3BvbnNlGBog" + 
+          "ASgJIlkKB1R4blR5cGUSDQoJQ0FSRF9BVVRIEAASEQoNQ0FSRF9QUkVfQVVU" + 
+          "SBABEhYKEkNBUkRfUFJFX0FVVEhfQ09ORhACEggKBENBU0gQAxIKCgZDSEVR" + 
+          "VUUQBCIfCg5UeG5TdGF0dXNJbnB1dBINCgVub25jZRgBIAIoCSIdCgxWb2lk" + 
+          "VHhuSW5wdXQSDQoFdHhuSWQYASACKAkiiwEKD1NlcnZlclR5cGVJbnB1dBI+" + 
+          "CgpzZXJ2ZXJ0eXBlGAEgAigOMiouY29tLmV6ZS5lemVjbGkuU2VydmVyVHlw" + 
+          "ZUlucHV0LlNlcnZlclR5cGUiOAoKU2VydmVyVHlwZRIUChBTRVJWRVJfVFlQ" + 
+          "RV9ERU1PEAASFAoQU0VSVkVSX1RZUEVfUFJPRBABIi4KB0FwcEluZm8SDwoH" + 
+          "YXBwbmFtZRgBIAIoCRISCgphcHB2ZXJzaW9uGAIgAigJQhIKDmNvbS5lemUu" + 
+          "ZXplY2xpUAE=");
       pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
         descriptor = root;
-        internal__static_ezecli_ApiInput__Descriptor = Descriptor.MessageTypes[0];
-        internal__static_ezecli_ApiInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiInput, global::com.eze.ezecli.ApiInput.Builder>(internal__static_ezecli_ApiInput__Descriptor,
+        internal__static_com_eze_ezecli_ApiInput__Descriptor = Descriptor.MessageTypes[0];
+        internal__static_com_eze_ezecli_ApiInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiInput, global::com.eze.ezecli.ApiInput.Builder>(internal__static_com_eze_ezecli_ApiInput__Descriptor,
                 new string[] { "MsgType", "MsgData", });
-        internal__static_ezecli_ApiOutput__Descriptor = Descriptor.MessageTypes[1];
-        internal__static_ezecli_ApiOutput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiOutput, global::com.eze.ezecli.ApiOutput.Builder>(internal__static_ezecli_ApiOutput__Descriptor,
+        internal__static_com_eze_ezecli_ApiOutput__Descriptor = Descriptor.MessageTypes[1];
+        internal__static_com_eze_ezecli_ApiOutput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ApiOutput, global::com.eze.ezecli.ApiOutput.Builder>(internal__static_com_eze_ezecli_ApiOutput__Descriptor,
                 new string[] { "EventType", "Status", "MsgText", "OutData", "Notification", });
-        internal__static_ezecli_ChangePasswordInput__Descriptor = Descriptor.MessageTypes[2];
-        internal__static_ezecli_ChangePasswordInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ChangePasswordInput, global::com.eze.ezecli.ChangePasswordInput.Builder>(internal__static_ezecli_ChangePasswordInput__Descriptor,
+        internal__static_com_eze_ezecli_ChangePasswordInput__Descriptor = Descriptor.MessageTypes[2];
+        internal__static_com_eze_ezecli_ChangePasswordInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ChangePasswordInput, global::com.eze.ezecli.ChangePasswordInput.Builder>(internal__static_com_eze_ezecli_ChangePasswordInput__Descriptor,
                 new string[] { "CurrentPassword", "NewPassword", });
-        internal__static_ezecli_ForwardReceiptInput__Descriptor = Descriptor.MessageTypes[3];
-        internal__static_ezecli_ForwardReceiptInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ForwardReceiptInput, global::com.eze.ezecli.ForwardReceiptInput.Builder>(internal__static_ezecli_ForwardReceiptInput__Descriptor,
+        internal__static_com_eze_ezecli_ForwardReceiptInput__Descriptor = Descriptor.MessageTypes[3];
+        internal__static_com_eze_ezecli_ForwardReceiptInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ForwardReceiptInput, global::com.eze.ezecli.ForwardReceiptInput.Builder>(internal__static_com_eze_ezecli_ForwardReceiptInput__Descriptor,
                 new string[] { "TxnId", "CustomerMobile", "CustomerEmail", });
-        internal__static_ezecli_LoginInput__Descriptor = Descriptor.MessageTypes[4];
-        internal__static_ezecli_LoginInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginInput, global::com.eze.ezecli.LoginInput.Builder>(internal__static_ezecli_LoginInput__Descriptor,
+        internal__static_com_eze_ezecli_LoginInput__Descriptor = Descriptor.MessageTypes[4];
+        internal__static_com_eze_ezecli_LoginInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginInput, global::com.eze.ezecli.LoginInput.Builder>(internal__static_com_eze_ezecli_LoginInput__Descriptor,
                 new string[] { "LoginMode", "Username", "Passkey", });
-        internal__static_ezecli_LoginOutput__Descriptor = Descriptor.MessageTypes[5];
-        internal__static_ezecli_LoginOutput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginOutput, global::com.eze.ezecli.LoginOutput.Builder>(internal__static_ezecli_LoginOutput__Descriptor,
+        internal__static_com_eze_ezecli_LoginOutput__Descriptor = Descriptor.MessageTypes[5];
+        internal__static_com_eze_ezecli_LoginOutput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.LoginOutput, global::com.eze.ezecli.LoginOutput.Builder>(internal__static_com_eze_ezecli_LoginOutput__Descriptor,
                 new string[] { "SessionKey", "Settings", });
-        internal__static_ezecli_ProgressInfo__Descriptor = Descriptor.MessageTypes[6];
-        internal__static_ezecli_ProgressInfo__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ProgressInfo, global::com.eze.ezecli.ProgressInfo.Builder>(internal__static_ezecli_ProgressInfo__Descriptor,
+        internal__static_com_eze_ezecli_ProgressInfo__Descriptor = Descriptor.MessageTypes[6];
+        internal__static_com_eze_ezecli_ProgressInfo__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ProgressInfo, global::com.eze.ezecli.ProgressInfo.Builder>(internal__static_com_eze_ezecli_ProgressInfo__Descriptor,
                 new string[] { "StepsCompleted", "TotalSteps", });
-        internal__static_ezecli_SignatureInput__Descriptor = Descriptor.MessageTypes[7];
-        internal__static_ezecli_SignatureInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.SignatureInput, global::com.eze.ezecli.SignatureInput.Builder>(internal__static_ezecli_SignatureInput__Descriptor,
+        internal__static_com_eze_ezecli_SignatureInput__Descriptor = Descriptor.MessageTypes[7];
+        internal__static_com_eze_ezecli_SignatureInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.SignatureInput, global::com.eze.ezecli.SignatureInput.Builder>(internal__static_com_eze_ezecli_SignatureInput__Descriptor,
                 new string[] { "TxnId", "ImageType", "ImageBytes", "Height", "Width", "TipAmount", });
-        internal__static_ezecli_StatusInfo__Descriptor = Descriptor.MessageTypes[8];
-        internal__static_ezecli_StatusInfo__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.StatusInfo, global::com.eze.ezecli.StatusInfo.Builder>(internal__static_ezecli_StatusInfo__Descriptor,
+        internal__static_com_eze_ezecli_StatusInfo__Descriptor = Descriptor.MessageTypes[8];
+        internal__static_com_eze_ezecli_StatusInfo__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.StatusInfo, global::com.eze.ezecli.StatusInfo.Builder>(internal__static_com_eze_ezecli_StatusInfo__Descriptor,
                 new string[] { "Code", "Message", });
-        internal__static_ezecli_TxnDetailsInput__Descriptor = Descriptor.MessageTypes[9];
-        internal__static_ezecli_TxnDetailsInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnDetailsInput, global::com.eze.ezecli.TxnDetailsInput.Builder>(internal__static_ezecli_TxnDetailsInput__Descriptor,
+        internal__static_com_eze_ezecli_TxnDetailsInput__Descriptor = Descriptor.MessageTypes[9];
+        internal__static_com_eze_ezecli_TxnDetailsInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnDetailsInput, global::com.eze.ezecli.TxnDetailsInput.Builder>(internal__static_com_eze_ezecli_TxnDetailsInput__Descriptor,
                 new string[] { "TxnId", });
-        internal__static_ezecli_TxnHistoryInput__Descriptor = Descriptor.MessageTypes[10];
-        internal__static_ezecli_TxnHistoryInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistoryInput, global::com.eze.ezecli.TxnHistoryInput.Builder>(internal__static_ezecli_TxnHistoryInput__Descriptor,
+        internal__static_com_eze_ezecli_TxnHistoryInput__Descriptor = Descriptor.MessageTypes[10];
+        internal__static_com_eze_ezecli_TxnHistoryInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistoryInput, global::com.eze.ezecli.TxnHistoryInput.Builder>(internal__static_com_eze_ezecli_TxnHistoryInput__Descriptor,
                 new string[] { "StrtDate", "EndDate", });
-        internal__static_ezecli_TxnHistory__Descriptor = Descriptor.MessageTypes[11];
-        internal__static_ezecli_TxnHistory__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory, global::com.eze.ezecli.TxnHistory.Builder>(internal__static_ezecli_TxnHistory__Descriptor,
+        internal__static_com_eze_ezecli_TxnHistory__Descriptor = Descriptor.MessageTypes[11];
+        internal__static_com_eze_ezecli_TxnHistory__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory, global::com.eze.ezecli.TxnHistory.Builder>(internal__static_com_eze_ezecli_TxnHistory__Descriptor,
                 new string[] { "TotalCount", "NetAmount", "SummaryItemCount", "SummaryItems", "Txns", });
-        internal__static_ezecli_TxnHistory_SummaryItem__Descriptor = internal__static_ezecli_TxnHistory__Descriptor.NestedTypes[0];
-        internal__static_ezecli_TxnHistory_SummaryItem__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory.Types.SummaryItem, global::com.eze.ezecli.TxnHistory.Types.SummaryItem.Builder>(internal__static_ezecli_TxnHistory_SummaryItem__Descriptor,
+        internal__static_com_eze_ezecli_TxnHistory_SummaryItem__Descriptor = internal__static_com_eze_ezecli_TxnHistory__Descriptor.NestedTypes[0];
+        internal__static_com_eze_ezecli_TxnHistory_SummaryItem__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnHistory.Types.SummaryItem, global::com.eze.ezecli.TxnHistory.Types.SummaryItem.Builder>(internal__static_com_eze_ezecli_TxnHistory_SummaryItem__Descriptor,
                 new string[] { "Title", "Count", "Amount", });
-        internal__static_ezecli_TxnInput__Descriptor = Descriptor.MessageTypes[12];
-        internal__static_ezecli_TxnInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnInput, global::com.eze.ezecli.TxnInput.Builder>(internal__static_ezecli_TxnInput__Descriptor,
+        internal__static_com_eze_ezecli_TxnInput__Descriptor = Descriptor.MessageTypes[12];
+        internal__static_com_eze_ezecli_TxnInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnInput, global::com.eze.ezecli.TxnInput.Builder>(internal__static_com_eze_ezecli_TxnInput__Descriptor,
                 new string[] { "TxnType", "Amount", "OrderId", "Nonce", "CustomerMobile", "CustomerEmail", "ExternalReference2", "ExternalReference3", "AmountOther", "ChequeNumber", "BankCode", "ChequeDate", "AdditionalData", "ReceiptType", });
-        internal__static_ezecli_Txn__Descriptor = Descriptor.MessageTypes[13];
-        internal__static_ezecli_Txn__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.Txn, global::com.eze.ezecli.Txn.Builder>(internal__static_ezecli_Txn__Descriptor,
+        internal__static_com_eze_ezecli_Txn__Descriptor = Descriptor.MessageTypes[13];
+        internal__static_com_eze_ezecli_Txn__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.Txn, global::com.eze.ezecli.Txn.Builder>(internal__static_com_eze_ezecli_Txn__Descriptor,
                 new string[] { "TxnType", "Amount", "TransactionId", "Timestamp", "ReceiptUrl", "OrderId", "ExternalReferenceNumber2", "ExternalReferenceNumber3", "CustomerMobileNumber", "CustomerName", "Status", "UserAgreement", "AuthCode", "LastFoundDigits", "CardBrand", "InvoiceNumber", "BatchNumber", "Mid", "Tid", "ReverseRefNumber", "ChequeNumber", "BankCode", "ChequeDate", "SettlementStatus", "Voidable", "ServerResponse", });
-        internal__static_ezecli_TxnStatusInput__Descriptor = Descriptor.MessageTypes[14];
-        internal__static_ezecli_TxnStatusInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnStatusInput, global::com.eze.ezecli.TxnStatusInput.Builder>(internal__static_ezecli_TxnStatusInput__Descriptor,
+        internal__static_com_eze_ezecli_TxnStatusInput__Descriptor = Descriptor.MessageTypes[14];
+        internal__static_com_eze_ezecli_TxnStatusInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.TxnStatusInput, global::com.eze.ezecli.TxnStatusInput.Builder>(internal__static_com_eze_ezecli_TxnStatusInput__Descriptor,
                 new string[] { "Nonce", });
-        internal__static_ezecli_VoidTxnInput__Descriptor = Descriptor.MessageTypes[15];
-        internal__static_ezecli_VoidTxnInput__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.VoidTxnInput, global::com.eze.ezecli.VoidTxnInput.Builder>(internal__static_ezecli_VoidTxnInput__Descriptor,
+        internal__static_com_eze_ezecli_VoidTxnInput__Descriptor = Descriptor.MessageTypes[15];
+        internal__static_com_eze_ezecli_VoidTxnInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.VoidTxnInput, global::com.eze.ezecli.VoidTxnInput.Builder>(internal__static_com_eze_ezecli_VoidTxnInput__Descriptor,
                 new string[] { "TxnId", });
+        internal__static_com_eze_ezecli_ServerTypeInput__Descriptor = Descriptor.MessageTypes[16];
+        internal__static_com_eze_ezecli_ServerTypeInput__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.ServerTypeInput, global::com.eze.ezecli.ServerTypeInput.Builder>(internal__static_com_eze_ezecli_ServerTypeInput__Descriptor,
+                new string[] { "Servertype", });
+        internal__static_com_eze_ezecli_AppInfo__Descriptor = Descriptor.MessageTypes[17];
+        internal__static_com_eze_ezecli_AppInfo__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::com.eze.ezecli.AppInfo, global::com.eze.ezecli.AppInfo.Builder>(internal__static_com_eze_ezecli_AppInfo__Descriptor,
+                new string[] { "Appname", "Appversion", });
         return null;
       };
       pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
@@ -240,11 +260,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ApiInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ApiInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<ApiInput, ApiInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ApiInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ApiInput__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -263,6 +283,9 @@ namespace com.eze.ezecli {
         CHANGE_PASSWORD = 9,
         LOGOUT = 10,
         TXN_DETAILS = 11,
+        SERVERAPI_INFO = 12,
+        SERVER_TYPE = 13,
+        APP_INFO = 97,
         ENABLE_DEBUG = 98,
         DISABLE_DEBUG = 99,
       }
@@ -306,7 +329,7 @@ namespace com.eze.ezecli {
       if (hasMsgData) {
         output.WriteBytes(2, field_names[0], MsgData);
       }
-      //UnknownFields.WriteTo(output);
+      UnknownFields.WriteTo(output);
     }
     
     private int memoizedSerializedSize = -1;
@@ -565,11 +588,6 @@ namespace com.eze.ezecli {
     static ApiInput() {
       object.ReferenceEquals(global::com.eze.ezecli.Ezetap.Descriptor, null);
     }
-
-    internal void WriteTo(System.IO.StreamWriter output)
-    {
-        throw new System.NotImplementedException();
-    }
   }
   
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -591,11 +609,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ApiOutput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ApiOutput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<ApiOutput, ApiOutput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ApiOutput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ApiOutput__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -620,6 +638,8 @@ namespace com.eze.ezecli {
         TXN_DETAILS_RESULT = 10,
         API_PROGRESS = 11,
         API_NOTIFICATION = 12,
+        SERVERAPI_RESULT = 13,
+        SETSERVER_RESULT = 14,
         EXIT_RESULT = 99,
       }
       
@@ -1113,11 +1133,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ChangePasswordInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ChangePasswordInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<ChangePasswordInput, ChangePasswordInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ChangePasswordInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ChangePasswordInput__FieldAccessorTable; }
     }
     
     public const int CurrentPasswordFieldNumber = 1;
@@ -1430,11 +1450,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ForwardReceiptInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ForwardReceiptInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<ForwardReceiptInput, ForwardReceiptInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ForwardReceiptInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ForwardReceiptInput__FieldAccessorTable; }
     }
     
     public const int TxnIdFieldNumber = 1;
@@ -1790,11 +1810,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_LoginInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_LoginInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<LoginInput, LoginInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_LoginInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_LoginInput__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -2170,11 +2190,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_LoginOutput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_LoginOutput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<LoginOutput, LoginOutput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_LoginOutput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_LoginOutput__FieldAccessorTable; }
     }
     
     public const int SessionKeyFieldNumber = 1;
@@ -2485,11 +2505,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ProgressInfo__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ProgressInfo__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<ProgressInfo, ProgressInfo.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_ProgressInfo__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ProgressInfo__FieldAccessorTable; }
     }
     
     public const int StepsCompletedFieldNumber = 1;
@@ -2800,11 +2820,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_SignatureInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_SignatureInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<SignatureInput, SignatureInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_SignatureInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_SignatureInput__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -3311,11 +3331,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_StatusInfo__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_StatusInfo__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<StatusInfo, StatusInfo.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_StatusInfo__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_StatusInfo__FieldAccessorTable; }
     }
     
     public const int CodeFieldNumber = 1;
@@ -3628,11 +3648,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnDetailsInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnDetailsInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<TxnDetailsInput, TxnDetailsInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnDetailsInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnDetailsInput__FieldAccessorTable; }
     }
     
     public const int TxnIdFieldNumber = 1;
@@ -3900,11 +3920,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnHistoryInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnHistoryInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<TxnHistoryInput, TxnHistoryInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnHistoryInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnHistoryInput__FieldAccessorTable; }
     }
     
     public const int StrtDateFieldNumber = 1;
@@ -4217,11 +4237,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnHistory__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnHistory__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<TxnHistory, TxnHistory.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnHistory__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnHistory__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -4246,11 +4266,11 @@ namespace com.eze.ezecli {
         }
         
         public static pbd::MessageDescriptor Descriptor {
-          get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnHistory_SummaryItem__Descriptor; }
+          get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnHistory_SummaryItem__Descriptor; }
         }
         
         protected override pb::FieldAccess.FieldAccessorTable<SummaryItem, SummaryItem.Builder> InternalFieldAccessors {
-          get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnHistory_SummaryItem__FieldAccessorTable; }
+          get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnHistory_SummaryItem__FieldAccessorTable; }
         }
         
         public const int TitleFieldNumber = 1;
@@ -5088,11 +5108,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<TxnInput, TxnInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnInput__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -5952,11 +5972,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_Txn__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_Txn__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<Txn, Txn.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_Txn__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_Txn__FieldAccessorTable; }
     }
     
     #region Nested types
@@ -7353,11 +7373,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnStatusInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnStatusInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<TxnStatusInput, TxnStatusInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_TxnStatusInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_TxnStatusInput__FieldAccessorTable; }
     }
     
     public const int NonceFieldNumber = 1;
@@ -7625,11 +7645,11 @@ namespace com.eze.ezecli {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_VoidTxnInput__Descriptor; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_VoidTxnInput__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<VoidTxnInput, VoidTxnInput.Builder> InternalFieldAccessors {
-      get { return global::com.eze.ezecli.Ezetap.internal__static_ezecli_VoidTxnInput__FieldAccessorTable; }
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_VoidTxnInput__FieldAccessorTable; }
     }
     
     public const int TxnIdFieldNumber = 1;
@@ -7874,6 +7894,613 @@ namespace com.eze.ezecli {
       }
     }
     static VoidTxnInput() {
+      object.ReferenceEquals(global::com.eze.ezecli.Ezetap.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class ServerTypeInput : pb::GeneratedMessage<ServerTypeInput, ServerTypeInput.Builder> {
+    private ServerTypeInput() { }
+    private static readonly ServerTypeInput defaultInstance = new ServerTypeInput().MakeReadOnly();
+    private static readonly string[] _serverTypeInputFieldNames = new string[] { "servertype" };
+    private static readonly uint[] _serverTypeInputFieldTags = new uint[] { 8 };
+    public static ServerTypeInput DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override ServerTypeInput DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override ServerTypeInput ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ServerTypeInput__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<ServerTypeInput, ServerTypeInput.Builder> InternalFieldAccessors {
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_ServerTypeInput__FieldAccessorTable; }
+    }
+    
+    #region Nested types
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public static partial class Types {
+      public enum ServerType {
+        SERVER_TYPE_DEMO = 0,
+        SERVER_TYPE_PROD = 1,
+      }
+      
+    }
+    #endregion
+    
+    public const int ServertypeFieldNumber = 1;
+    private bool hasServertype;
+    private global::com.eze.ezecli.ServerTypeInput.Types.ServerType servertype_ = global::com.eze.ezecli.ServerTypeInput.Types.ServerType.SERVER_TYPE_DEMO;
+    public bool HasServertype {
+      get { return hasServertype; }
+    }
+    public global::com.eze.ezecli.ServerTypeInput.Types.ServerType Servertype {
+      get { return servertype_; }
+    }
+    
+    public override bool IsInitialized {
+      get {
+        if (!hasServertype) return false;
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      int size = SerializedSize;
+      string[] field_names = _serverTypeInputFieldNames;
+      if (hasServertype) {
+        output.WriteEnum(1, field_names[0], (int) Servertype, Servertype);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        
+        size = 0;
+        if (hasServertype) {
+          size += pb::CodedOutputStream.ComputeEnumSize(1, (int) Servertype);
+        }
+        size += UnknownFields.SerializedSize;
+        memoizedSerializedSize = size;
+        return size;
+      }
+    }
+    
+    public static ServerTypeInput ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static ServerTypeInput ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static ServerTypeInput ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static ServerTypeInput ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private ServerTypeInput MakeReadOnly() {
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(ServerTypeInput prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed partial class Builder : pb::GeneratedBuilder<ServerTypeInput, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(ServerTypeInput cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private ServerTypeInput result;
+      
+      private ServerTypeInput PrepareBuilder() {
+        if (resultIsReadOnly) {
+          ServerTypeInput original = result;
+          result = new ServerTypeInput();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override ServerTypeInput MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::com.eze.ezecli.ServerTypeInput.Descriptor; }
+      }
+      
+      public override ServerTypeInput DefaultInstanceForType {
+        get { return global::com.eze.ezecli.ServerTypeInput.DefaultInstance; }
+      }
+      
+      public override ServerTypeInput BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is ServerTypeInput) {
+          return MergeFrom((ServerTypeInput) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(ServerTypeInput other) {
+        if (other == global::com.eze.ezecli.ServerTypeInput.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.HasServertype) {
+          Servertype = other.Servertype;
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_serverTypeInputFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _serverTypeInputFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 8: {
+              object unknown;
+              if(input.ReadEnum(ref result.servertype_, out unknown)) {
+                result.hasServertype = true;
+              } else if(unknown is int) {
+                if (unknownFields == null) {
+                  unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+                }
+                unknownFields.MergeVarintField(1, (ulong)(int)unknown);
+              }
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public bool HasServertype {
+       get { return result.hasServertype; }
+      }
+      public global::com.eze.ezecli.ServerTypeInput.Types.ServerType Servertype {
+        get { return result.Servertype; }
+        set { SetServertype(value); }
+      }
+      public Builder SetServertype(global::com.eze.ezecli.ServerTypeInput.Types.ServerType value) {
+        PrepareBuilder();
+        result.hasServertype = true;
+        result.servertype_ = value;
+        return this;
+      }
+      public Builder ClearServertype() {
+        PrepareBuilder();
+        result.hasServertype = false;
+        result.servertype_ = global::com.eze.ezecli.ServerTypeInput.Types.ServerType.SERVER_TYPE_DEMO;
+        return this;
+      }
+    }
+    static ServerTypeInput() {
+      object.ReferenceEquals(global::com.eze.ezecli.Ezetap.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class AppInfo : pb::GeneratedMessage<AppInfo, AppInfo.Builder> {
+    private AppInfo() { }
+    private static readonly AppInfo defaultInstance = new AppInfo().MakeReadOnly();
+    private static readonly string[] _appInfoFieldNames = new string[] { "appname", "appversion" };
+    private static readonly uint[] _appInfoFieldTags = new uint[] { 10, 18 };
+    public static AppInfo DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override AppInfo DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override AppInfo ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_AppInfo__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<AppInfo, AppInfo.Builder> InternalFieldAccessors {
+      get { return global::com.eze.ezecli.Ezetap.internal__static_com_eze_ezecli_AppInfo__FieldAccessorTable; }
+    }
+    
+    public const int AppnameFieldNumber = 1;
+    private bool hasAppname;
+    private string appname_ = "";
+    public bool HasAppname {
+      get { return hasAppname; }
+    }
+    public string Appname {
+      get { return appname_; }
+    }
+    
+    public const int AppversionFieldNumber = 2;
+    private bool hasAppversion;
+    private string appversion_ = "";
+    public bool HasAppversion {
+      get { return hasAppversion; }
+    }
+    public string Appversion {
+      get { return appversion_; }
+    }
+    
+    public override bool IsInitialized {
+      get {
+        if (!hasAppname) return false;
+        if (!hasAppversion) return false;
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      int size = SerializedSize;
+      string[] field_names = _appInfoFieldNames;
+      if (hasAppname) {
+        output.WriteString(1, field_names[0], Appname);
+      }
+      if (hasAppversion) {
+        output.WriteString(2, field_names[1], Appversion);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        
+        size = 0;
+        if (hasAppname) {
+          size += pb::CodedOutputStream.ComputeStringSize(1, Appname);
+        }
+        if (hasAppversion) {
+          size += pb::CodedOutputStream.ComputeStringSize(2, Appversion);
+        }
+        size += UnknownFields.SerializedSize;
+        memoizedSerializedSize = size;
+        return size;
+      }
+    }
+    
+    public static AppInfo ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static AppInfo ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static AppInfo ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static AppInfo ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static AppInfo ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static AppInfo ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static AppInfo ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static AppInfo ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static AppInfo ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static AppInfo ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private AppInfo MakeReadOnly() {
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(AppInfo prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed partial class Builder : pb::GeneratedBuilder<AppInfo, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(AppInfo cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private AppInfo result;
+      
+      private AppInfo PrepareBuilder() {
+        if (resultIsReadOnly) {
+          AppInfo original = result;
+          result = new AppInfo();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override AppInfo MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::com.eze.ezecli.AppInfo.Descriptor; }
+      }
+      
+      public override AppInfo DefaultInstanceForType {
+        get { return global::com.eze.ezecli.AppInfo.DefaultInstance; }
+      }
+      
+      public override AppInfo BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is AppInfo) {
+          return MergeFrom((AppInfo) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(AppInfo other) {
+        if (other == global::com.eze.ezecli.AppInfo.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.HasAppname) {
+          Appname = other.Appname;
+        }
+        if (other.HasAppversion) {
+          Appversion = other.Appversion;
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_appInfoFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _appInfoFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 10: {
+              result.hasAppname = input.ReadString(ref result.appname_);
+              break;
+            }
+            case 18: {
+              result.hasAppversion = input.ReadString(ref result.appversion_);
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public bool HasAppname {
+        get { return result.hasAppname; }
+      }
+      public string Appname {
+        get { return result.Appname; }
+        set { SetAppname(value); }
+      }
+      public Builder SetAppname(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasAppname = true;
+        result.appname_ = value;
+        return this;
+      }
+      public Builder ClearAppname() {
+        PrepareBuilder();
+        result.hasAppname = false;
+        result.appname_ = "";
+        return this;
+      }
+      
+      public bool HasAppversion {
+        get { return result.hasAppversion; }
+      }
+      public string Appversion {
+        get { return result.Appversion; }
+        set { SetAppversion(value); }
+      }
+      public Builder SetAppversion(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasAppversion = true;
+        result.appversion_ = value;
+        return this;
+      }
+      public Builder ClearAppversion() {
+        PrepareBuilder();
+        result.hasAppversion = false;
+        result.appversion_ = "";
+        return this;
+      }
+    }
+    static AppInfo() {
       object.ReferenceEquals(global::com.eze.ezecli.Ezetap.Descriptor, null);
     }
   }

@@ -1,7 +1,9 @@
-namespace com.eze.api {
-public class APIResult {
-    
-	private string eventType;
+namespace com.eze.api 
+{
+public class EzeResult 
+{
+
+    private EventName eventName;
 	private Status status;
 	private string code;
 	private string message;
@@ -13,24 +15,19 @@ public class APIResult {
 	public void setPaymentResult(PaymentResult paymentResult) {
 		this.paymentResult = paymentResult;
 	}
-	public string getEventType() {
-		return eventType;
+    public EventName getEventName()
+    {
+        return eventName;
 	}
-	public void setEventType(string eventType) {
-		this.eventType = eventType;
+    public void setEventName(EventName eventName)
+    {
+        this.eventName = eventName;
 	}
 	public Status getStatus() {
 		return status;
 	}
 	public void setStatus(Status status) {
 		this.status = status;
-	}
-	public void setStatus(string status) {
-		if (status == Status.SUCCESS.ToString()) {
-			this.status = Status.SUCCESS;
-		} else if (status == Status.FAILURE.ToString()) {
-			this.status = Status.FAILURE;
-		}
 	}
 	public string getCode() {
 		return code;
@@ -46,7 +43,7 @@ public class APIResult {
 	}
 	
 	public override string ToString() {
-		return "EzeResult [eventType=" + eventType + ", status=" + status + ", code=" + code + ", message=" + message
+        return "EzeResult [eventName=" + eventName + ", status=" + status + ", code=" + code + ", message=" + message
 				+ ", paymentResult=" + paymentResult + "]";
 	}
 }

@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Diagnostics;
-using com.eze.exception;
 using com.eze.ezecli;
 using Google.ProtocolBuffers;
 
@@ -13,14 +12,23 @@ public class EzeAPI {
 	private BinaryReader input;
 	//private StreamReader err;
 	private static EzeAPI API;
-	
+
+    //public EventArgs args = null;
+    public event EzeNotification EzeEvent;
+    public delegate void EzeNotification(String notifyMessage, EventArgs args);
+
+    public void setMessageHandler(EzeNotification handler)
+    {
+        EzeEvent += handler;
+    }
+
 	private EzeAPI() {
 	}
 	
 	/** 
 	 * This method destroys the ezecli exe and gracefully closes the API.
 	 */
-	public void destroy() {
+	private void destroyInstance() {
 		if (null != p) {
 			try {
 				p.Kill();
@@ -30,28 +38,40 @@ public class EzeAPI {
 		}
 	}
 	
-	/** 
-	 * Method returns the Singleton instance of EzeAPI.
-	 * 
-	 * @return EzeAPI object
-	 */
-	public static EzeAPI getInstance() {
-		
-		if (null == API) {
-			API = new EzeAPI();
-			API.initialize();
-		}
-		return API;
-	}
-	
+    public static void destroy()
+    {
+        if (null != API)
+        {
+            API.quit();
+            API.destroyInstance();
+        }
+    }
+
+    /**
+     * Method creates an instance of EzeAPI with the given API configuration settings
+     */
+    public static EzeAPI create(ServerType serverType)
+    {
+        if (null == API)
+        {
+            API = new EzeAPI();
+            API.initialize();
+        }
+
+        API.setServerType(serverType);
+        return API;
+    }
+
 	/**
 	 * This method instantiates the Ezecli and setup the input 
 	 * and output buffers for reading and writing through protocol buffers.
 	 */
-	public void initialize() {
-
-		try {
-			if (null != p) {
+	private void initialize() 
+    {
+		try 
+        {
+			if (null != p) 
+            {
 				p.Kill();
 			} 
 
@@ -70,25 +90,54 @@ public class EzeAPI {
             output = new BinaryWriter(p.StandardInput.BaseStream);
             //err = p.StandardError;
 
-		} catch (Exception e) {
+		} 
+        catch (Exception e) 
+        {
 			Console.Write(e.Message);
 
-			try {
+			try 
+            {
 				if (p != null) p.Kill();
-			} catch (Exception ex) {
+			} 
+            catch (Exception ex) 
+            {
                 Console.Write(ex.Message);
 		    }
-			throw new APIException("Initialize failed. e="+e.Message);
+			throw new EzeException("Initialize failed. e="+e.Message);
 		}
 	}
 
-	public APIResult login(string userName, string password) {
-		Console.WriteLine("...Login User <"+userName+":"+password+">");
+    private void setServerType(ServerType type)
+    {
+        Console.WriteLine("...Setting server type to <" + type.ToString() + ">");
+
+        ServerTypeInput serverTypeInput = ServerTypeInput.CreateBuilder()
+                        .SetServertype(MapServerType(type)).Build();
+
+        ApiInput apiInput = ApiInput.CreateBuilder()
+                        .SetMsgType(ApiInput.Types.MessageType.SERVER_TYPE)
+                        .SetMsgData(serverTypeInput.ToByteString()).Build();
+
+        this.send(apiInput);
+
+        /*
+        EzeResult result = null;
+
+        while (true)
+        {
+            result = this.getResult(this.receive());
+            if (result.getEventName() == EventName.SET_SERVER_TYPE) break;
+        }*/
+    }
+
+	public EzeResult login(LoginMode mode, string userName, string passkey) 
+    {
+		Console.WriteLine("...Login User <"+mode+":"+userName+":"+passkey+">");
 		
 		LoginInput loginInput = LoginInput.CreateBuilder()
-						.SetLoginMode(LoginInput.Types.LoginMode.PASSWORD)
+						.SetLoginMode(MapLoginMode(mode))
 						.SetUsername(userName)
-						.SetPasskey(password).Build();
+						.SetPasskey(passkey).Build();
 
 		ApiInput apiInput = ApiInput.CreateBuilder()
 						.SetMsgType(ApiInput.Types.MessageType.LOGIN)
@@ -96,13 +145,15 @@ public class EzeAPI {
 		
         this.send(apiInput);
 
-        APIResult result = null;
+        EzeResult result = null;
 	
-		while (true) {
+		while (true) 
+        {
 			result = this.getResult(this.receive());
-			    if (result.getEventType() != com.eze.ezecli.ApiOutput.Types.EventType.LOGIN_RESULT.ToString()) continue;
-			if ((result.getStatus().ToString() == com.eze.ezecli.ApiOutput.Types.ResultStatus.FAILURE.ToString())) {
-				throw new APIException("Login failed. "+result.ToString());
+            if (result.getEventName() != EventName.LOGIN) continue;
+			if ((result.getStatus().ToString() == com.eze.ezecli.ApiOutput.Types.ResultStatus.FAILURE.ToString())) 
+            {
+                throw new EzeException("Login failed. " + result.ToString());
 			}
 			break;
 		}
@@ -110,7 +161,7 @@ public class EzeAPI {
 		return result;
 	}
 	
-	public void quit() {
+	private void quit() {
 		this.logout().exit();
 	}
 	
@@ -122,12 +173,12 @@ public class EzeAPI {
 				.Build();
 
 		this.send(apiInput);
-		APIResult result = null;
+		EzeResult result = null;
 		while (true) {
 			result = this.getResult(this.receive());
-			if (result.getEventType() != ApiOutput.Types.EventType.LOGOUT_RESULT.ToString()) continue;
+			if (result.getEventName() != EventName.LOGOUT) continue;
 			if ((result.getStatus().ToString() == ApiOutput.Types.ResultStatus.FAILURE.ToString())) {
-				throw new APIException("Logout failed. "+result.ToString());
+                throw new EzeException("Logout failed. " + result.ToString());
 			}
 			break;
 		}
@@ -141,19 +192,19 @@ public class EzeAPI {
 				.Build();
 
 		this.send(apiInput);
-		APIResult result = null;
+		EzeResult result = null;
 		while (true) {
 			result = this.getResult(this.receive());
-			if (result.getEventType() != ApiOutput.Types.EventType.EXIT_RESULT.ToString()) continue;
+			if (result.getEventName() != EventName.EXIT) continue;
 			if ((result.getStatus().ToString() == ApiOutput.Types.ResultStatus.FAILURE.ToString())) {
-				throw new APIException("Exit failed. "+result.ToString());
+                throw new EzeException("Exit failed. " + result.ToString());
 			}
 			break;
 		}
 		return this;
 	}
 	
-	public EzeAPI prepareDevice() {
+	public EzeResult prepareDevice() {
 		Console.WriteLine("...Preparing Device");
 		
 		ApiInput apiInput = ApiInput.CreateBuilder()
@@ -161,51 +212,55 @@ public class EzeAPI {
 				.Build();
 
 		this.send(apiInput);
-		APIResult result = null;
+		EzeResult result = null;
 		
-		while (true) {
+		while (true) 
+        {
 			result = this.getResult(this.receive());
-			if (result.getEventType() != ApiOutput.Types.EventType.PREPARE_DEVICE_RESULT.ToString()) continue;
-			if ((result.getStatus().ToString() == ApiOutput.Types.ResultStatus.FAILURE.ToString())) {
-				throw new APIException("Prepare device failed. "+result.ToString());
-			}
-			break;
+            if (result.getEventName() == EventName.PREPARE_DEVICE) break;
 		}
-		return this;
+		return result;
 	}
 	
-	public APIResult takePayment(PaymentType type, double amount, PaymentOptions options) {
-		
-		APIResult result = null;
+	public EzeResult takePayment(PaymentType type, double amount, PaymentOptions options) 
+    {
+		EzeResult result = null;
 		Console.WriteLine("...Take Payment <"+type.ToString()+",amount="+amount+","+">");
 		TxnInput.Types.TxnType txnType = TxnInput.Types.TxnType.CARD_PRE_AUTH;
 		
-        switch(type) {
-    		case PaymentType.CARD: {
+        switch(type) 
+        {
+    		case PaymentType.CARD: 
+            {
                 txnType = TxnInput.Types.TxnType.CARD_AUTH;
 			    break;
             }
-		    case PaymentType.CASH: {
+		    case PaymentType.CASH: 
+            {
 			    txnType = TxnInput.Types.TxnType.CASH;
 			    break;
             }
-		    case PaymentType.CHEQUE: {
+		    case PaymentType.CHEQUE: 
+            {
 			    txnType = TxnInput.Types.TxnType.CHEQUE;
 			    break;
             }
-		    default: {
+		    default: 
+            {
 			    txnType = TxnInput.Types.TxnType.CARD_PRE_AUTH;
                 break;
             }
 		}
-				
-		if (amount <= 0) throw new APIException("Amount is 0 or negative");
-		if (txnType == TxnInput.Types.TxnType.CHEQUE) {
+
+        if (amount <= 0) throw new EzeException("Amount is 0 or negative");
+		if (txnType == TxnInput.Types.TxnType.CHEQUE) 
+        {
 			if ((null == options) ||
 				(null == options.getChequeNo()) || (options.getChequeNo().Length == 0) ||
 				(null == options.getBankCode()) || (options.getBankCode().Length == 0) ||
-				(null == options.getChequeDate())) {
-				throw new APIException("Cheque details not passed for a Cheque transaction");
+				(null == options.getChequeDate())) 
+            {
+                    throw new EzeException("Cheque details not passed for a Cheque transaction");
 			}
 		}
 		
@@ -228,15 +283,22 @@ public class EzeAPI {
 
 		this.send(apiInput);
 				
-		while (true) {
+		while (true) 
+        {
 			result = this.getResult(this.receive());
-			if (result.getEventType() != ApiOutput.Types.EventType.TXN_RESULT.ToString()) continue;
-			break;
+
+            if (result.getEventName() == EventName.TAKE_PAYMENT)
+            {
+                if (result.getStatus() == Status.SUCCESS) EzeEvent("Payment Successful", new EventArgs());
+                else EzeEvent("Payment Failed", new EventArgs());
+                break;
+            }
 		}
 		return result;
 	}
 
-	public APIResult sendReceipt(string txnId, string mobileNo) { 
+    public EzeResult sendReceipt(string txnId, string mobileNo)
+    { 
 		Console.Error.WriteLine("...sendReceipt <"+txnId+">");
 		
 		ForwardReceiptInput receiptInput = ForwardReceiptInput.CreateBuilder()
@@ -248,41 +310,48 @@ public class EzeAPI {
 				.SetMsgData(receiptInput.ToByteString()).Build();
 
 		this.send(apiInput);
-		APIResult result = null;
+        EzeResult result = null;
 		while (true) {
 			result = this.getResult(this.receive());
-			if (result.getEventType() != ApiOutput.Types.EventType.FORWARD_RECEIPT_RESULT.ToString()) continue;
+			if (result.getEventName() != EventName.SEND_RECEIPT) continue;
 			break;
 		}
 		return result;
 	}
-	
-	private APIResult getResult(ApiOutput apiOutput) {
 
-		APIResult result = new APIResult();
+    private EzeResult getResult(ApiOutput apiOutput)
+    {
+        EzeResult result = new EzeResult();
+
+        if (null == apiOutput) throw new EzeException("Invalid response from EPIC. ApiOutput is null");
+
+        result.setEventName(MapEventName(apiOutput.EventType));
+        if (apiOutput.HasStatus) result.setStatus(MapStatus(apiOutput.Status));
+        if (apiOutput.HasMsgText) result.setMessage(apiOutput.MsgText);
 		
-		if (null == apiOutput) throw new APIException("Invalid response from EPIC. ApiOutput is null");
-
-		result.setEventType(apiOutput.EventType.ToString());
-
-		if ((apiOutput.OutData != null) && (!apiOutput.OutData.IsEmpty)) {
-
-			result.setStatus(apiOutput.Status.ToString());
-			result.setMessage(apiOutput.MsgText.ToString());
-			try {
+        if (apiOutput.HasOutData) 
+        {
+    		try 
+            {
 				StatusInfo statusInfo = StatusInfo.ParseFrom(apiOutput.OutData);
 
-				result.setCode(statusInfo.Code);
-                if (null != statusInfo.Message) result.setMessage(statusInfo.Message);
-			} catch (InvalidProtocolBufferException e) {
+                if (null != statusInfo)
+                {
+                    if (statusInfo.HasCode) result.setCode(statusInfo.Code);
+                    if (statusInfo.HasMessage) result.setMessage(statusInfo.Message);
+                }
+			} 
+            catch (InvalidProtocolBufferException e) 
+            {
                 Console.WriteLine(e.Message);
             }
 
-			if ((apiOutput.Status == ApiOutput.Types.ResultStatus.SUCCESS) && (apiOutput.EventType.Equals(ApiOutput.Types.EventType.TXN_RESULT))) {
-				
+			if ((apiOutput.Status == ApiOutput.Types.ResultStatus.SUCCESS) && (apiOutput.EventType.Equals(ApiOutput.Types.EventType.TXN_RESULT))) 
+            {
 				PaymentResult paymentResult = new PaymentResult();
 				Txn txnOutput;
-				try {
+				try 
+                {
 					txnOutput = Txn.ParseFrom(apiOutput.OutData);
 
 					paymentResult.setPmtType(txnOutput.TxnType.ToString());
@@ -299,14 +368,22 @@ public class EzeAPI {
 					paymentResult.setTid(txnOutput.Tid);
 					paymentResult.setMerchantId(txnOutput.Mid);
 
-				} catch (InvalidProtocolBufferException e) {
-					throw new APIException("Error reading payment result. ex="+e.Message);
+				} 
+                catch (InvalidProtocolBufferException e) 
+                {
+                    throw new EzeException("Error reading payment result. ex=" + e.Message);
 				}
 				result.setPaymentResult(paymentResult);
 			}
 		}
-		
-		//Console.WriteLine(result.ToString());
+
+        //Console.Write("ApiOutput: " + apiOutput.ToString());
+
+        if ((result.getEventName() == EventName.NOTIFICATION) && (null != EzeEvent))
+        {
+            EzeEvent(result.getMessage(), new EventArgs());
+        }
+
 		return result;
 	}
 	
@@ -405,5 +482,39 @@ public class EzeAPI {
 		return (byteArr[3]) << 24 | (byteArr[2] & 0xFF) << 16
 				| (byteArr[1] & 0xFF) << 8 | (byteArr[0] & 0xFF);
 	}
+
+    public static Status MapStatus(ApiOutput.Types.ResultStatus status)
+    {
+        if (status == ApiOutput.Types.ResultStatus.SUCCESS) return Status.SUCCESS;
+        else return Status.FAILURE;
+    }
+    public static ServerTypeInput.Types.ServerType MapServerType(ServerType type)
+    {
+        if (type == ServerType.DEMO) return ServerTypeInput.Types.ServerType.SERVER_TYPE_DEMO;
+        else return ServerTypeInput.Types.ServerType.SERVER_TYPE_PROD;
+    }
+
+    public static LoginInput.Types.LoginMode MapLoginMode(LoginMode mode)
+    {
+        if (mode == LoginMode.APPKEY) return LoginInput.Types.LoginMode.APPKEY;
+        else return LoginInput.Types.LoginMode.PASSWORD;
+    }
+
+    public static EventName MapEventName(com.eze.ezecli.ApiOutput.Types.EventType eType)
+    {
+        switch (eType)
+        {
+            case ApiOutput.Types.EventType.LOGIN_RESULT: return EventName.LOGIN;
+            case ApiOutput.Types.EventType.LOGOUT_RESULT: return EventName.LOGOUT;
+            case ApiOutput.Types.EventType.EXIT_RESULT: return EventName.EXIT;
+            case ApiOutput.Types.EventType.SETSERVER_RESULT: return EventName.SET_SERVER_TYPE;
+            case ApiOutput.Types.EventType.PREPARE_DEVICE_RESULT: return EventName.PREPARE_DEVICE;
+            case ApiOutput.Types.EventType.TXN_RESULT: return EventName.TAKE_PAYMENT;
+            case ApiOutput.Types.EventType.FORWARD_RECEIPT_RESULT: return EventName.SEND_RECEIPT;
+            case ApiOutput.Types.EventType.API_NOTIFICATION: return EventName.NOTIFICATION;
+            case ApiOutput.Types.EventType.API_PROGRESS: return EventName.NOTIFICATION;
+            default: return EventName.OTHER;
+       }
+    }
 }
 }

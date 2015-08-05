@@ -70,13 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="src\com\eze\api\APIResult.cs" />
+    <Compile Include="src\com\eze\api\EzeResult.cs" />
     <Compile Include="src\com\eze\api\EzeAPI.cs" />
     <Compile Include="src\com\eze\api\PaymentOptions.cs" />
     <Compile Include="src\com\eze\api\PaymentResult.cs" />
-    <Compile Include="src\com\eze\api\PaymentType.cs" />
-    <Compile Include="src\com\eze\api\Status.cs" />
-    <Compile Include="src\com\eze\exception\APIException.cs" />
+    <Compile Include="src\com\eze\api\EzeConstants.cs" />
+    <Compile Include="src\com\eze\api\EzeException.cs" />
     <Compile Include="src\com\eze\ezecli\Ezetap.cs" />
   </ItemGroup>
   <ItemGroup>
